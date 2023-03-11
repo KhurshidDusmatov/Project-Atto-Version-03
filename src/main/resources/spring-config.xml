@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="org.example"/>
+
+<!--    <bean name="profileRepository" class="org.example.repository.ProfileRepository"/>-->
+<!--    <bean name="cardRepository" class="org.example.repository.CardRepository"/>-->
+<!--    <bean name="terminalRepository" class="org.example.repository.TerminalRepository"/>-->
+<!--    <bean name="transactionRepository" class="org.example.repository.TransactionRepository"/>-->
+
+<!--    <bean name="authService" class="org.example.service.AuthService" autowire="constructor"/>-->
+<!--    <bean name="profileService" class="org.example.service.ProfileService" autowire="byType"/>-->
+<!--    <bean name="cardService" class="org.example.service.CardService" autowire="byType"/>-->
+<!--    <bean name="transactionService" class="org.example.service.TransactionService" autowire="byType"/>-->
+<!--    <bean name="terminalService" class="org.example.service.TerminalService" autowire="byType"/>-->
+
+<!--    <bean name="profileController" class="org.example.controller.ProfileController">-->
+<!--        <property name="cardService" ref="cardService"/>-->
+<!--    </bean>-->
+    <!--    <bean name="adminController" class="org.example.controller.AdminController" autowire="byType"/>-->
+    <!--    <bean name="authController" class="org.example.controller.AuthController" autowire="constructor" init-method="init"/>-->
+
+    <bean name="initDatabase" class="org.example.db.InitDataBase">
+        <property name="cardRepository" ref="cardRepository"/>
+        <property name="profileRepository" ref="profileRepository"/>
+    </bean>
+
+</beans>
