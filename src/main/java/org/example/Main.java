@@ -1,9 +1,11 @@
 package org.example;
 
+import org.example.config.Config;
 import org.example.controller.AuthController;
 import org.example.db.DataBase;
 import org.example.db.InitDataBase;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
@@ -11,9 +13,8 @@ public class Main {
     public static void main(String[] args) {
         DataBase.initTable();
 
-        // TODO  at home
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        InitDataBase initDataBase = (InitDataBase) context.getBean("initDatabase");
+        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        InitDataBase initDataBase = (InitDataBase) context.getBean("initDataBase");
 
         initDataBase.adminInit();
         initDataBase.addCompanyCard();

@@ -29,6 +29,11 @@
             <artifactId>spring-context</artifactId>
             <version>6.0.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.6.15.Final</version>
+        </dependency>
     </dependencies>
 
 </project>

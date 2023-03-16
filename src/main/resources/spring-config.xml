@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="org.example"/>
+<!--    <context:component-scan base-package="org.example"/>-->
 
 <!--    <bean name="profileRepository" class="org.example.repository.ProfileRepository"/>-->
 <!--    <bean name="cardRepository" class="org.example.repository.CardRepository"/>-->
@@ -26,9 +26,9 @@
     <!--    <bean name="adminController" class="org.example.controller.AdminController" autowire="byType"/>-->
     <!--    <bean name="authController" class="org.example.controller.AuthController" autowire="constructor" init-method="init"/>-->
 
-    <bean name="initDatabase" class="org.example.db.InitDataBase">
-        <property name="cardRepository" ref="cardRepository"/>
-        <property name="profileRepository" ref="profileRepository"/>
-    </bean>
+<!--    <bean name="initDatabase" class="org.example.db.InitDataBase">-->
+<!--        <property name="cardRepository" ref="cardRepository"/>-->
+<!--        <property name="profileRepository" ref="profileRepository"/>-->
+<!--    </bean>-->
 
 </beans>

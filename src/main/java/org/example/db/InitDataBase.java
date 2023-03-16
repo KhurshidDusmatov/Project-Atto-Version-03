@@ -11,11 +11,12 @@ import org.example.repository.ProfileRepository;
 import org.example.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Component
+@Repository
 public class InitDataBase {
     @Autowired
     private ProfileRepository profileRepository;
